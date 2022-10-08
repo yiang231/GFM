@@ -143,7 +143,7 @@ https://www.bilibili.com
 Email样式<i@typora.io>
 
 ## 图片
-<img src="./GFM.assets/show.png" alt="Optional title 鼠标悬置于图片上会出现的标题文字" width="25%;" height="25%;" align="right"/>
+<img src="/GFM.assets/show.png" alt="Optional title 鼠标悬置于图片上会出现的标题文字" width="25%;" height="25%;" align="right"/>
 ![Optional title 图片丢失时展示的文字](GFM.assets/show.png)
 # 表格
 | Column1  |       Column2 | Column3      | Column4      | \|的表示方法 |
