@@ -60,13 +60,15 @@ ccccc
 **粗体1**	__粗体2__ cB  
 *斜体1*	_斜体2_ cI  
 ~~删除线~~ as5  
-==高亮文本==  
 <u>下划线</u> cU  
-下标  θ~1~ 	上标  θ^1^  上^下^~标~  
+下标 θ~1~ 上标 θ^1^ 上^下^~标~  
 `<!--注释-->`  
 <kbd>方框</kbd>  
 <span style="color:red">this text is red</span>  
-<font face="黑体" color=red size=5>这是红色黑体5号字</font>
+<font face="黑体" color=red size=5>这是红色黑体5号字</font>  
+++Inserted text++  
+==Marked text==  
+\<mark>  
 
 # 列表
 - 无序列表 cs]
@@ -94,21 +96,32 @@ ccccc
 > 文本引用 csQ
 > > * Quoted text1  
          > 1. Quoted text2  
-         > 
+         >
+> > > 多层级
 
 # 代码
 行内代码`System out println("Hello World");`  
 如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段  
 使用转义反引号  
 ``There is a literal backtick (`) here.``
+
 ```java
 代码块1 csK
 System out println("Hello World");
 ```
+
 ~~~java
 代码块2
 System out println("Hello World");
 ~~~
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
 GFM 中还可以显示 diff 效果，即展示一个文件内容的增加与删除。绿色表示新增，红色表示删除。在三个反引号后面加上 diff 标识符，并且其代码块行头以 + 开头表示新增，- 开头表示删除。
 ```diff
 + 新增的内容
@@ -157,10 +170,10 @@ $$
 - GFM锚点也支持中文  
 
 超链接 cK  
-*[百度跳转链接](https://www.baidu.com)*  
+__*[百度跳转链接 baidu.com](https://www.baidu.com "附带链接说明")*__ - 加粗斜体的高亮效果  
 提示：链接文本不必一定是文本。图片或其他`HTML`元素都可以成为链接。
 [跳转到样式](# 样式)  
-链接引用`在任意位置定义URL`    
+链接引用【也适用于图片】`在任意位置定义URL`    
 This is an [example][45] reference-style link.  
 
 [45]: https://www.baidu.com  "链接引用"  
@@ -173,7 +186,7 @@ Email样式<i@typora.io>
 ## 图片
 <img src="GFM.assets/show.png" alt="Optional title 鼠标悬置于图片上会出现的标题文字" width="25%;" height="25%;" align="right"/>
 
-![Optional title 图片丢失时展示的文字](GFM.assets/show.png)
+![Optional title 图片丢失时展示的文字](GFM.assets/show.png "附带图片说明")
 
 # 表格
 | Column1  |       Column2 | Column3      | Column4      | \|的表示方法 |
@@ -190,6 +203,18 @@ You can [^create] footnotes like this [^footnote].
 
 [^footnote]: Here is the *text* of the **footnote**.
 [^create]: create
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup** and multiple paragraphs.
+
+[^second]: Footnote text.
 
 # UML diagrams
 ```mermaid
@@ -333,4 +358,19 @@ cond(no)->sub1(right)->op1
   <summary>折叠摘要</summary>
   折叠的内容
 </details>
+
+## Abbreviations
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+## Custom containers
+
+::: warning
+*here be dragons*
+:::
+
 {:toc}
