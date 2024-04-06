@@ -468,8 +468,8 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
 ## Ref
 
-https://gfm.docschina.org/zh-hans/
+[GitHub 风格的 Markdown 规范](https://gfm.docschina.org/zh-hans/)
 
-https://github.github.com/gfm/
+[GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 
 {:toc}
