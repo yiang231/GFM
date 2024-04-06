@@ -9,17 +9,24 @@ Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法
 # Table of Contents【目录】见首行尾行
 [TOC]
 
-# GFM&Typroa
+# ATX 标题
 一级标题Github Flavored Markdown
 ==
+
 二级标题A
 --
-## A c2
-### B c3
+
+### B
 #### C
-##### D设置的字体大小
-###### E设置的字体大小
-改变标题级别 c=,c-
+##### D
+###### E
+####### f
+
+setext 标题 1 级标题下划线
+=========
+
+setext 标题 2 级标题下划线
+---------
 
 # 文本行
 即一行文字，markdown 中换行必须进行手动操作（两个空格加换行符），自动换行将会变成一个空格  
@@ -34,7 +41,7 @@ bbbbb
 
 # 段落
 由数行文字成一段，markdown 中由空行划分段落  
-> aaaaa、bbbbb 后面都接两个空格，因此会换行，但它们都是同一段落
+> aaaaa、bbbbb 后面都接两个空格，因此会换行，但它们都是同一段落，或使用反斜杠
 
 aaaaa  
 bbbbb  
@@ -50,17 +57,17 @@ ccccc
 
 # 段落和换行
 列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符，通过在文本行之间留一个空白行，可创建新段落。  
-`typora`按`Shift+Enter`创建一个换行符。然而，大多数的编辑器会忽略单行，为了让其它的`Markdown`编辑器识别你的换行符，可以在行尾留下两个空格或者插入`<br/>`标签。  
-1.  This is a list item with two paragraphs.
+大多数的编辑器会忽略单行，为了让其它的`Markdown`编辑器识别你的换行符，可以在行尾留下两个空格或者插入`<br/>`标签。  
+1.  This is a list item with two paragraphs.  
     The second paragraph.
 2.  Suspendisse id sem consectetuer libero luctus adipiscing.
 
 # 文本样式
-常规	c0  
-**粗体1**	__粗体2__ cB  
-*斜体1*	_斜体2_ cI  
-~~删除线~~ as5  
-<u>下划线</u> cU  
+常规  
+**强调1**	__强调2__  
+*斜体1*	_斜体2_  
+~~删除线~~  
+<u>下划线</u>  
 下标 θ~1~ 上标 θ^1^ 上^下^~标~  
 `<!--注释-->`  
 <kbd>方框</kbd>  
@@ -71,18 +78,18 @@ ccccc
 \<mark>  
 
 # 列表
-- 无序列表 cs]
+- 无序列表  
     + item
     * item
-         + [x] 任务列表 csX
-         - [ ] 列表缩进c[和c],或者Tab
-1. 有序列表 cs[
+         + [x] 任务列表  
+         - [ ] 列表缩进 Tab
+3. 有序列表
 
 4. context
 
     5. item2
     
-    6. item3
+    6) item3
 
         hello段落嵌套
     
@@ -90,10 +97,10 @@ ccccc
     
     7. item4
     
-    8. item5
+    8) item5
 
 # 引用
-> 文本引用 csQ
+> 文本引用
 > > * Quoted text1  
          > 1. Quoted text2  
          >
@@ -106,7 +113,7 @@ ccccc
 ``There is a literal backtick (`) here.``
 
 ```java
-代码块1 csK
+代码块1
 System out println("Hello World");
 ```
 
@@ -169,9 +176,12 @@ $$
 - 标题名相同时，第2个锚点引用时加后缀，如`标题-2`
 - GFM锚点也支持中文  
 
-超链接 cK  
+超链接  
+
+[foo]: /url "title"
+[foo]  
 __*[百度跳转链接 baidu.com](https://www.baidu.com "附带链接说明")*__ - 加粗斜体的高亮效果  
-提示：链接文本不必一定是文本。图片或其他`HTML`元素都可以成为链接。
+提示：链接文本不必一定是文本。图片或其他`HTML`元素都可以成为链接。  
 [跳转到样式](# 样式)  
 链接引用【也适用于图片】`在任意位置定义URL`    
 This is an [example][45] reference-style link.  
@@ -179,7 +189,7 @@ This is an [example][45] reference-style link.
 [45]: https://www.baidu.com  "链接引用"  
 
 ## URL
-支持自动从标准`URL`创建链接  
+支持自动从标准`URL`创建链接\
 https://www.bilibili.com  
 Email样式<i@typora.io>
 
@@ -455,5 +465,11 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 ::: warning
 *here be dragons*
 :::
+
+## Ref
+
+https://gfm.docschina.org/zh-hans/
+
+https://github.github.com/gfm/
 
 {:toc}
